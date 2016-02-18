@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C19E33991C764653000EF43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33981C764653000EF43F /* AppDelegate.swift */; };
+		C19E339B1C764653000EF43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E339A1C764653000EF43F /* ViewController.swift */; };
+		C19E339E1C764653000EF43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E339C1C764653000EF43F /* Main.storyboard */; };
+		C19E33A01C764653000EF43F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19E339F1C764653000EF43F /* Assets.xcassets */; };
+		C19E33A31C764653000EF43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E33A11C764653000EF43F /* LaunchScreen.storyboard */; };
+		C19E33AE1C764653000EF43F /* ChorelordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33AD1C764653000EF43F /* ChorelordTests.swift */; };
+		C19E33B91C764653000EF43F /* ChorelordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33B81C764653000EF43F /* ChorelordUITests.swift */; };
+		C19E33CB1C7674B5000EF43F /* ChoreList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */; };
+		C19E33D21C767741000EF43F /* ChoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33D01C767741000EF43F /* ChoreTableViewCell.swift */; };
+		C19E33D31C767741000EF43F /* ChoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E33D11C767741000EF43F /* ChoreTableViewCell.xib */; };
+		C19E33D51C768874000EF43F /* ChoreListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33D41C768874000EF43F /* ChoreListController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C19E33AA1C764653000EF43F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19E338D1C764653000EF43F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C19E33941C764653000EF43F;
+			remoteInfo = Chorelord;
+		};
+		C19E33B51C764653000EF43F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19E338D1C764653000EF43F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C19E33941C764653000EF43F;
+			remoteInfo = Chorelord;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C19E33951C764653000EF43F /* Chorelord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chorelord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19E33981C764653000EF43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C19E339A1C764653000EF43F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C19E339D1C764653000EF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C19E339F1C764653000EF43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C19E33A21C764653000EF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C19E33A41C764653000EF43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19E33A91C764653000EF43F /* ChorelordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChorelordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19E33AD1C764653000EF43F /* ChorelordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChorelordTests.swift; sourceTree = "<group>"; };
+		C19E33AF1C764653000EF43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19E33B41C764653000EF43F /* ChorelordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChorelordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19E33B81C764653000EF43F /* ChorelordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChorelordUITests.swift; sourceTree = "<group>"; };
+		C19E33BA1C764653000EF43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChoreList.storyboard; sourceTree = "<group>"; };
+		C19E33D01C767741000EF43F /* ChoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreTableViewCell.swift; sourceTree = "<group>"; };
+		C19E33D11C767741000EF43F /* ChoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoreTableViewCell.xib; sourceTree = "<group>"; };
+		C19E33D41C768874000EF43F /* ChoreListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreListController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C19E33921C764653000EF43F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E33A61C764653000EF43F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E33B11C764653000EF43F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C19E338C1C764653000EF43F = {
+			isa = PBXGroup;
+			children = (
+				C19E33971C764653000EF43F /* Chorelord */,
+				C19E33AC1C764653000EF43F /* ChorelordTests */,
+				C19E33B71C764653000EF43F /* ChorelordUITests */,
+				C19E33961C764653000EF43F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C19E33961C764653000EF43F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33951C764653000EF43F /* Chorelord.app */,
+				C19E33A91C764653000EF43F /* ChorelordTests.xctest */,
+				C19E33B41C764653000EF43F /* ChorelordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C19E33971C764653000EF43F /* Chorelord */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33C71C7649F4000EF43F /* Common */,
+				C19E33C61C7649ED000EF43F /* Module */,
+				C19E33981C764653000EF43F /* AppDelegate.swift */,
+				C19E339A1C764653000EF43F /* ViewController.swift */,
+				C19E339C1C764653000EF43F /* Main.storyboard */,
+				C19E339F1C764653000EF43F /* Assets.xcassets */,
+				C19E33A11C764653000EF43F /* LaunchScreen.storyboard */,
+				C19E33A41C764653000EF43F /* Info.plist */,
+			);
+			path = Chorelord;
+			sourceTree = "<group>";
+		};
+		C19E33AC1C764653000EF43F /* ChorelordTests */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33AD1C764653000EF43F /* ChorelordTests.swift */,
+				C19E33AF1C764653000EF43F /* Info.plist */,
+			);
+			path = ChorelordTests;
+			sourceTree = "<group>";
+		};
+		C19E33B71C764653000EF43F /* ChorelordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33B81C764653000EF43F /* ChorelordUITests.swift */,
+				C19E33BA1C764653000EF43F /* Info.plist */,
+			);
+			path = ChorelordUITests;
+			sourceTree = "<group>";
+		};
+		C19E33C61C7649ED000EF43F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */,
+				C19E33D41C768874000EF43F /* ChoreListController.swift */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		C19E33C71C7649F4000EF43F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33D01C767741000EF43F /* ChoreTableViewCell.swift */,
+				C19E33D11C767741000EF43F /* ChoreTableViewCell.xib */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C19E33941C764653000EF43F /* Chorelord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19E33BD1C764653000EF43F /* Build configuration list for PBXNativeTarget "Chorelord" */;
+			buildPhases = (
+				C19E33911C764653000EF43F /* Sources */,
+				C19E33921C764653000EF43F /* Frameworks */,
+				C19E33931C764653000EF43F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chorelord;
+			productName = Chorelord;
+			productReference = C19E33951C764653000EF43F /* Chorelord.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C19E33A81C764653000EF43F /* ChorelordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19E33C01C764653000EF43F /* Build configuration list for PBXNativeTarget "ChorelordTests" */;
+			buildPhases = (
+				C19E33A51C764653000EF43F /* Sources */,
+				C19E33A61C764653000EF43F /* Frameworks */,
+				C19E33A71C764653000EF43F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C19E33AB1C764653000EF43F /* PBXTargetDependency */,
+			);
+			name = ChorelordTests;
+			productName = ChorelordTests;
+			productReference = C19E33A91C764653000EF43F /* ChorelordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C19E33B31C764653000EF43F /* ChorelordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19E33C31C764653000EF43F /* Build configuration list for PBXNativeTarget "ChorelordUITests" */;
+			buildPhases = (
+				C19E33B01C764653000EF43F /* Sources */,
+				C19E33B11C764653000EF43F /* Frameworks */,
+				C19E33B21C764653000EF43F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C19E33B61C764653000EF43F /* PBXTargetDependency */,
+			);
+			name = ChorelordUITests;
+			productName = ChorelordUITests;
+			productReference = C19E33B41C764653000EF43F /* ChorelordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C19E338D1C764653000EF43F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Yeti LLC";
+				TargetAttributes = {
+					C19E33941C764653000EF43F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C19E33A81C764653000EF43F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C19E33941C764653000EF43F;
+					};
+					C19E33B31C764653000EF43F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C19E33941C764653000EF43F;
+					};
+				};
+			};
+			buildConfigurationList = C19E33901C764653000EF43F /* Build configuration list for PBXProject "Chorelord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C19E338C1C764653000EF43F;
+			productRefGroup = C19E33961C764653000EF43F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C19E33941C764653000EF43F /* Chorelord */,
+				C19E33A81C764653000EF43F /* ChorelordTests */,
+				C19E33B31C764653000EF43F /* ChorelordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C19E33931C764653000EF43F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E33A31C764653000EF43F /* LaunchScreen.storyboard in Resources */,
+				C19E33D31C767741000EF43F /* ChoreTableViewCell.xib in Resources */,
+				C19E33A01C764653000EF43F /* Assets.xcassets in Resources */,
+				C19E339E1C764653000EF43F /* Main.storyboard in Resources */,
+				C19E33CB1C7674B5000EF43F /* ChoreList.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E33A71C764653000EF43F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E33B21C764653000EF43F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C19E33911C764653000EF43F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E33D21C767741000EF43F /* ChoreTableViewCell.swift in Sources */,
+				C19E33D51C768874000EF43F /* ChoreListController.swift in Sources */,
+				C19E339B1C764653000EF43F /* ViewController.swift in Sources */,
+				C19E33991C764653000EF43F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E33A51C764653000EF43F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E33AE1C764653000EF43F /* ChorelordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E33B01C764653000EF43F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E33B91C764653000EF43F /* ChorelordUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C19E33AB1C764653000EF43F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C19E33941C764653000EF43F /* Chorelord */;
+			targetProxy = C19E33AA1C764653000EF43F /* PBXContainerItemProxy */;
+		};
+		C19E33B61C764653000EF43F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C19E33941C764653000EF43F /* Chorelord */;
+			targetProxy = C19E33B51C764653000EF43F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C19E339C1C764653000EF43F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C19E339D1C764653000EF43F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C19E33A11C764653000EF43F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C19E33A21C764653000EF43F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C19E33BB1C764653000EF43F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C19E33BC1C764653000EF43F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C19E33BE1C764653000EF43F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chorelord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeti.Chorelord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C19E33BF1C764653000EF43F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chorelord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeti.Chorelord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C19E33C11C764653000EF43F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChorelordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeti.ChorelordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chorelord.app/Chorelord";
+			};
+			name = Debug;
+		};
+		C19E33C21C764653000EF43F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChorelordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeti.ChorelordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chorelord.app/Chorelord";
+			};
+			name = Release;
+		};
+		C19E33C41C764653000EF43F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChorelordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeti.ChorelordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Chorelord;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C19E33C51C764653000EF43F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChorelordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeti.ChorelordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Chorelord;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C19E33901C764653000EF43F /* Build configuration list for PBXProject "Chorelord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E33BB1C764653000EF43F /* Debug */,
+				C19E33BC1C764653000EF43F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C19E33BD1C764653000EF43F /* Build configuration list for PBXNativeTarget "Chorelord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E33BE1C764653000EF43F /* Debug */,
+				C19E33BF1C764653000EF43F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C19E33C01C764653000EF43F /* Build configuration list for PBXNativeTarget "ChorelordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E33C11C764653000EF43F /* Debug */,
+				C19E33C21C764653000EF43F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C19E33C31C764653000EF43F /* Build configuration list for PBXNativeTarget "ChorelordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E33C41C764653000EF43F /* Debug */,
+				C19E33C51C764653000EF43F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C19E338D1C764653000EF43F /* Project object */;
+}
