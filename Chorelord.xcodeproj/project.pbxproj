@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C19E33991C764653000EF43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33981C764653000EF43F /* AppDelegate.swift */; };
-		C19E339B1C764653000EF43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E339A1C764653000EF43F /* ViewController.swift */; };
-		C19E339E1C764653000EF43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E339C1C764653000EF43F /* Main.storyboard */; };
+		C19E339B1C764653000EF43F /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E339A1C764653000EF43F /* SetupController.swift */; };
+		C19E339E1C764653000EF43F /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E339C1C764653000EF43F /* Setup.storyboard */; };
 		C19E33A01C764653000EF43F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19E339F1C764653000EF43F /* Assets.xcassets */; };
 		C19E33A31C764653000EF43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E33A11C764653000EF43F /* LaunchScreen.storyboard */; };
 		C19E33AE1C764653000EF43F /* ChorelordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33AD1C764653000EF43F /* ChorelordTests.swift */; };
@@ -40,8 +40,8 @@
 /* Begin PBXFileReference section */
 		C19E33951C764653000EF43F /* Chorelord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chorelord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19E33981C764653000EF43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C19E339A1C764653000EF43F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C19E339D1C764653000EF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C19E339A1C764653000EF43F /* SetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		C19E339D1C764653000EF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setup.storyboard; sourceTree = "<group>"; };
 		C19E339F1C764653000EF43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C19E33A21C764653000EF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C19E33A41C764653000EF43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,8 +108,6 @@
 				C19E33C71C7649F4000EF43F /* Common */,
 				C19E33C61C7649ED000EF43F /* Module */,
 				C19E33981C764653000EF43F /* AppDelegate.swift */,
-				C19E339A1C764653000EF43F /* ViewController.swift */,
-				C19E339C1C764653000EF43F /* Main.storyboard */,
 				C19E339F1C764653000EF43F /* Assets.xcassets */,
 				C19E33A11C764653000EF43F /* LaunchScreen.storyboard */,
 				C19E33A41C764653000EF43F /* Info.plist */,
@@ -138,8 +136,8 @@
 		C19E33C61C7649ED000EF43F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */,
-				C19E33D41C768874000EF43F /* ChoreListController.swift */,
+				C1F300F31C77CB8300C4DC63 /* Home */,
+				C1F300F21C77CB7100C4DC63 /* List */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -151,6 +149,24 @@
 				C19E33D11C767741000EF43F /* ChoreTableViewCell.xib */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		C1F300F21C77CB7100C4DC63 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */,
+				C19E33D41C768874000EF43F /* ChoreListController.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		C1F300F31C77CB8300C4DC63 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C19E339A1C764653000EF43F /* SetupController.swift */,
+				C19E339C1C764653000EF43F /* Setup.storyboard */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +276,7 @@
 				C19E33A31C764653000EF43F /* LaunchScreen.storyboard in Resources */,
 				C19E33D31C767741000EF43F /* ChoreTableViewCell.xib in Resources */,
 				C19E33A01C764653000EF43F /* Assets.xcassets in Resources */,
-				C19E339E1C764653000EF43F /* Main.storyboard in Resources */,
+				C19E339E1C764653000EF43F /* Setup.storyboard in Resources */,
 				C19E33CB1C7674B5000EF43F /* ChoreList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +304,7 @@
 			files = (
 				C19E33D21C767741000EF43F /* ChoreTableViewCell.swift in Sources */,
 				C19E33D51C768874000EF43F /* ChoreListController.swift in Sources */,
-				C19E339B1C764653000EF43F /* ViewController.swift in Sources */,
+				C19E339B1C764653000EF43F /* SetupController.swift in Sources */,
 				C19E33991C764653000EF43F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,12 +341,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C19E339C1C764653000EF43F /* Main.storyboard */ = {
+		C19E339C1C764653000EF43F /* Setup.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C19E339D1C764653000EF43F /* Base */,
 			);
-			name = Main.storyboard;
+			name = Setup.storyboard;
 			sourceTree = "<group>";
 		};
 		C19E33A11C764653000EF43F /* LaunchScreen.storyboard */ = {
@@ -516,6 +532,7 @@
 				C19E33BF1C764653000EF43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C19E33C01C764653000EF43F /* Build configuration list for PBXNativeTarget "ChorelordTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +541,7 @@
 				C19E33C21C764653000EF43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C19E33C31C764653000EF43F /* Build configuration list for PBXNativeTarget "ChorelordUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +550,7 @@
 				C19E33C51C764653000EF43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

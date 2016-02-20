@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SetupController.swift
 //  Chorelord
 //
 //  Created by Anya on 2/18/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class SetupController: UIViewController, UITextFieldDelegate {
   
   // MARK: Properties
   
@@ -39,6 +39,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
   // MARK: Actions
   @IBAction func addButton(sender: UIButton) {
     choreLabel.text = "Default Text"
+    let storyboard = UIStoryboard(name: "ChoreList", bundle: nil)
+    let controller = storyboard.instantiateViewControllerWithIdentifier("List") as UIViewController
+    presentViewController(controller, animated: true, completion: nil)
   }
   
 
