@@ -38,7 +38,6 @@ class SetupController: UIViewController, UITextFieldDelegate {
   }
   // MARK: Actions
   @IBAction func addButton(sender: UIButton) {
-    choreLabel.text = "Default Text"
     let storyboard = UIStoryboard(name: "ChoreList", bundle: nil)
     let controller = storyboard.instantiateViewControllerWithIdentifier("List") as UIViewController
     presentViewController(controller, animated: true, completion: nil)

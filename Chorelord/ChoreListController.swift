@@ -13,12 +13,10 @@ let choresName = ["Water Roof Plants", "Clean Sink, Coffee area & Countertops", 
 let names = ["Baylee", "Alex", "Anya", "Ellie", "Lee", "Dean", "Tony", "Rudy", "Tim", "Evan", "America", "Geoff", "Mike", "Jon"]
 
 class ChoreListController: UITableViewController {
-  let choreCells:[ChoreTableViewCell] = []
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.reorderList(names, start: "2016-02-01", end: "2016-02-15", interval: 7)
+    self.reorderList(names, start: "2016-02-01", end: "2016-02-15", interval: 7) // this is doing nothing right now, just for testing purposes
     tableView.registerNib(UINib(nibName: "ChoreTableViewCell", bundle: nil), forCellReuseIdentifier: "ChoreTableViewCell")
   }
   
@@ -48,7 +46,6 @@ class ChoreListController: UITableViewController {
     let calendar = NSCalendar.currentCalendar()
     let unit:NSCalendarUnit = NSCalendarUnit.Day
     let components = calendar.components(unit, fromDate: self.formatDate(start), toDate: self.formatDate(end), options: NSCalendarOptions(rawValue: 0))
-    print(components.day)
     return components.day
   }
   
@@ -63,7 +60,6 @@ class ChoreListController: UITableViewController {
       for _ in 1...cycleNumber {
         let first = newList.removeFirst()
         newList.append(first)
-        print(newList)
       }
     }
     return newList
