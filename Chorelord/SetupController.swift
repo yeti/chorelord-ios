@@ -1,5 +1,5 @@
 //
-//  SetupController.swift
+//  SetupViewController.swift
 //  Chorelord
 //
 //  Created by Anya on 2/18/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetupController: UIViewController, UITextFieldDelegate {
+class SetupViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Properties
   

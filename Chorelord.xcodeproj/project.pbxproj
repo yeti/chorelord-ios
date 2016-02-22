@@ -17,7 +17,7 @@
 		C19E33CB1C7674B5000EF43F /* ChoreList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */; };
 		C19E33D21C767741000EF43F /* ChoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33D01C767741000EF43F /* ChoreTableViewCell.swift */; };
 		C19E33D31C767741000EF43F /* ChoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E33D11C767741000EF43F /* ChoreTableViewCell.xib */; };
-		C19E33D51C768874000EF43F /* ChoreListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33D41C768874000EF43F /* ChoreListController.swift */; };
+		C19E33D51C768874000EF43F /* ChoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E33D41C768874000EF43F /* ChoreListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChoreList.storyboard; sourceTree = "<group>"; };
 		C19E33D01C767741000EF43F /* ChoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreTableViewCell.swift; sourceTree = "<group>"; };
 		C19E33D11C767741000EF43F /* ChoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoreTableViewCell.xib; sourceTree = "<group>"; };
-		C19E33D41C768874000EF43F /* ChoreListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreListController.swift; sourceTree = "<group>"; };
+		C19E33D41C768874000EF43F /* ChoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				C19E33CA1C7674B5000EF43F /* ChoreList.storyboard */,
-				C19E33D41C768874000EF43F /* ChoreListController.swift */,
+				C19E33D41C768874000EF43F /* ChoreListViewController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19E33D21C767741000EF43F /* ChoreTableViewCell.swift in Sources */,
-				C19E33D51C768874000EF43F /* ChoreListController.swift in Sources */,
+				C19E33D51C768874000EF43F /* ChoreListViewController.swift in Sources */,
 				C19E339B1C764653000EF43F /* SetupController.swift in Sources */,
 				C19E33991C764653000EF43F /* AppDelegate.swift in Sources */,
 			);
