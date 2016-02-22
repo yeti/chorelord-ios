@@ -10,9 +10,12 @@ import UIKit
 
 class ChoreTableViewCell: UITableViewCell {
 
+
   @IBOutlet weak var choreName: UILabel!
   @IBOutlet weak var username: UILabel!
   @IBOutlet weak var choreImage: UIImageView!
+  
+  
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -24,5 +27,5 @@ class ChoreTableViewCell: UITableViewCell {
 
     // Configure the view for the selected state
   }
-    
+  
 }
