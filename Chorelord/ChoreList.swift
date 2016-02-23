@@ -11,10 +11,19 @@ import Foundation
 class ChoreList {
   var choreNames: [String]
   var employeeNames: [String]
+  var startDate: String?
+  var interval: Int?
   
   init(choreNames: [String], employeeNames: [String]) {
     self.choreNames = choreNames
     self.employeeNames = employeeNames
+  }
+  
+  init(choreNames: [String], employeeNames: [String], startDate: String, interval: Int?) {
+    self.choreNames = choreNames
+    self.employeeNames = employeeNames
+    self.startDate = startDate
+    self.interval = interval
   }
   
   /**
@@ -22,7 +31,7 @@ class ChoreList {
    **/
   func formatDate(date: String) -> NSDate {
     let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd" // ex: 2015-02-01
+    dateFormatter.dateFormat = "MMMM dd, yyyy" // ex: February 25, 2016
     let formatted: NSDate = dateFormatter.dateFromString(date)!
     return formatted
   }
@@ -30,28 +39,32 @@ class ChoreList {
   /**
    * Calculate the day difference between 2 dates
    **/
-  func calcDayDiff(start: String, end: String) -> Int {
+  func calcDayDiff(start: String) -> Int {
     let calendar = NSCalendar.currentCalendar()
+    let todaysDate: NSDate = NSDate()
     let unit: NSCalendarUnit = NSCalendarUnit.Day
-    let components = calendar.components(unit, fromDate: self.formatDate(start), toDate: self.formatDate(end), options: NSCalendarOptions(rawValue: 0))
+    let components = calendar.components(unit, fromDate: self.formatDate(start), toDate: todaysDate, options: NSCalendarOptions(rawValue: 0))
     return components.day
   }
   
   /**
    * Reorder the list based on the cycle
    **/
-  func reorderList(nameList: [String], start: String, end: String, interval: Int) -> [String] {
-    var newList = nameList
-    let dayDifference = calcDayDiff(start, end: end)
-    let cycleNumber = dayDifference/interval // always floor
-    if (cycleNumber > 0) {
-      for _ in 1...cycleNumber {
-        let first = newList.removeFirst()
-        newList.append(first)
+  func reorderList() {
+    var newList = employeeNames
+    if let interval = self.interval {
+      let dayDifference = calcDayDiff(startDate!)
+      let cycleNumber = dayDifference/interval // always floor
+      if (cycleNumber > 0) {
+        for _ in 1...cycleNumber {
+          let first = newList.removeFirst()
+          newList.append(first)
+        }
+        employeeNames = newList
+      } else {
+        print("interval is nil")
       }
+      print(newList)
     }
-    print(newList)
-    return newList
   }
-  
 }

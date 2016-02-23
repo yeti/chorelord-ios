@@ -18,7 +18,6 @@ class ChoreListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    choreList.reorderList(employeeNames, start: "2016-02-01", end: "2016-02-15", interval: 7) // this is doing nothing right now, just for testing purposes
     tableView.registerNib(UINib(nibName: "ChoreTableViewCell", bundle: nil), forCellReuseIdentifier: "ChoreTableViewCell")
   }
   
@@ -28,9 +27,17 @@ class ChoreListViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ChoreTableViewCell", forIndexPath: indexPath) as! ChoreTableViewCell
-    cell.choreName.text = choreNames[indexPath.row]
-    cell.username.text = employeeNames[indexPath.row]
+    cell.choreName.text = choreList.choreNames[indexPath.row]
+    cell.username.text = choreList.employeeNames[indexPath.row]
     return cell
   }
-  
+  /**
+  * Called when the user add interval and date values
+  **/
+  func updateChoreList(interval: Int, date: String) {
+    choreList.interval = interval
+    choreList.startDate = date
+    choreList.reorderList()
   }
+  
+}
