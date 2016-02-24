@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum TextFieldTags: Int {
+  case GroupNameTag = 0, IntervalTag
+}
+
 class SetupViewController: UIViewController, UITextFieldDelegate {
   var tempGroupName: String?
   var tempStartDate: NSDate?
@@ -19,16 +23,25 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var intervalTextField: UITextField!
   @IBOutlet weak var dateButton: UIButton!
   
-
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    self.view.addGestureRecognizer(tap)
+    
     // Do any additional setup after loading the view, typically from a nib.
     groupNameTextField.delegate = self
+    intervalTextField.delegate = self
     let datePicker = UIDatePicker()
     updateDate(datePicker)
   }
-
+  
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    dismissKeyboard()
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -42,22 +55,37 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
   }
   
   func textFieldDidEndEditing(textField: UITextField) {
-    tempGroupName = textField.text
+    if let textValue = textField.text {
+      switch (textField.tag) {
+        case TextFieldTags.GroupNameTag.rawValue:
+          tempGroupName = textValue
+          break
+        case TextFieldTags.IntervalTag.rawValue:
+          tempInterval = Int(textValue)
+          break
+        default:
+          break
+      }
+    }
     textField.resignFirstResponder()
+  }
+  
+  func dismissKeyboard() {
+    view.endEditing(true)
   }
   
   // MARK: Actions
   @IBAction func addButton(sender: UIButton) {
     let storyboard = UIStoryboard(name: "ChoreList", bundle: nil)
     let controller = storyboard.instantiateViewControllerWithIdentifier("List") as! ChoreListViewController
-    if let intervalValue = self.intervalTextField.text {
-      controller.updateChoreList(Int(intervalValue)!, date: self.tempStartDate!)
-      presentViewController(controller, animated: true, completion: nil)
-    }
+    controller.updateChoreList(self.tempInterval!, date: self.tempStartDate!)
+    presentViewController(controller, animated: true, completion: nil)
+
   }
 
   
   @IBAction func setUpDate(sender: UITextField) {
+    dismissKeyboard()
     let picker = UIDatePicker()
     picker.datePickerMode = UIDatePickerMode.Date
     if let tempDate  = self.tempStartDate {

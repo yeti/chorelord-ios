@@ -12,13 +12,13 @@ class ChoreList {
   var listName: String?
   var choreNames: [String]
   var employeeNames: [String]
-  var startDate: NSDate?
+  var startDate: NSDate
   var interval: Int?
   
   init(choreNames: [String], employeeNames: [String]) {
     self.choreNames = choreNames
     self.employeeNames = employeeNames
-    self.startDate = NSDate()
+    self.startDate = NSDate() // automatically sets as today's date
   }
   
   init(listName: String, choreNames: [String], employeeNames: [String], startDate: NSDate, interval: Int?) {
@@ -46,7 +46,7 @@ class ChoreList {
   func reorderList() {
     var newList = employeeNames
     if let interval = self.interval {
-      let dayDifference = calcDayDiff(startDate!)
+      let dayDifference = calcDayDiff(startDate)
       let cycleNumber = dayDifference/interval // always floor
       if (cycleNumber > 0) {
         for _ in 1...cycleNumber {
@@ -55,7 +55,7 @@ class ChoreList {
         }
         employeeNames = newList
       } else {
-        print("interval is nil")
+        print("The cycle hasn't started yet")
       }
       print(newList)
     }
