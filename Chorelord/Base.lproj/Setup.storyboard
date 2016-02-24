@@ -28,12 +28,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Group's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQD-q3-YQY">
-                                        <rect key="frame" x="0.0" y="33" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="32" width="374" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cS-02-VHh">
-                                        <rect key="frame" x="0.0" y="75" width="78" height="21"/>
+                                        <rect key="frame" x="0.0" y="74" width="78" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-Y8-7Py">
-                                        <rect key="frame" x="0.0" y="224" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="223" width="30" height="30"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
                                             <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeK-SA-AlO"/>
@@ -65,7 +65,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xym-IS-Qla" secondAttribute="trailing" id="9J7-ci-aoQ"/>
                                     <constraint firstItem="lQD-q3-YQY" firstAttribute="leading" secondItem="cJM-u0-UfO" secondAttribute="leading" id="ZTL-Pk-Wmn"/>
+                                    <constraint firstItem="xym-IS-Qla" firstAttribute="leading" secondItem="cJM-u0-UfO" secondAttribute="leading" id="cXF-xh-oCL"/>
                                     <constraint firstAttribute="trailing" secondItem="lQD-q3-YQY" secondAttribute="trailing" id="kso-cX-ecS"/>
                                 </constraints>
                             </stackView>
@@ -80,9 +82,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
-                        <outlet property="choreLabel" destination="b7c-CF-vY8" id="XAf-z0-PbV"/>
-                        <outlet property="choreTextField" destination="lQD-q3-YQY" id="uqW-1c-QEd"/>
                         <outlet property="dateButton" destination="hrZ-7p-v1D" id="izk-B4-kIY"/>
+                        <outlet property="groupNameTextField" destination="lQD-q3-YQY" id="dvi-nv-2o6"/>
                         <outlet property="intervalTextField" destination="xym-IS-Qla" id="9Ds-PV-nV1"/>
                     </connections>
                 </viewController>

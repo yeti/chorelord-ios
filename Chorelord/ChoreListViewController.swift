@@ -34,7 +34,7 @@ class ChoreListViewController: UITableViewController {
   /**
   * Called when the user add interval and date values
   **/
-  func updateChoreList(interval: Int, date: String) {
+  func updateChoreList(interval: Int, date: NSDate) {
     choreList.interval = interval
     choreList.startDate = date
     choreList.reorderList()

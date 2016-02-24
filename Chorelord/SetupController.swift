@@ -9,22 +9,24 @@
 import UIKit
 
 class SetupViewController: UIViewController, UITextFieldDelegate {
+  var tempGroupName: String?
+  var tempStartDate: NSDate?
+  var tempInterval: Int?
   
   // MARK: Properties
   
-  @IBOutlet weak var choreTextField: UITextField!
-  @IBOutlet weak var choreLabel: UILabel!
-
+  @IBOutlet weak var groupNameTextField: UITextField!
   @IBOutlet weak var intervalTextField: UITextField!
   @IBOutlet weak var dateButton: UIButton!
+  
 
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    choreTextField.delegate = self
+    groupNameTextField.delegate = self
     let datePicker = UIDatePicker()
-    dateToString(datePicker)
+    updateDate(datePicker)
   }
 
   override func didReceiveMemoryWarning() {
@@ -40,14 +42,16 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
   }
   
   func textFieldDidEndEditing(textField: UITextField) {
-    choreLabel.text = textField.text
+    tempGroupName = textField.text
+    textField.resignFirstResponder()
   }
+  
   // MARK: Actions
   @IBAction func addButton(sender: UIButton) {
     let storyboard = UIStoryboard(name: "ChoreList", bundle: nil)
     let controller = storyboard.instantiateViewControllerWithIdentifier("List") as! ChoreListViewController
-    if let intervalValue = intervalTextField.text {
-      controller.updateChoreList(Int(intervalValue)!, date: dateButton.titleLabel!.text!)
+    if let intervalValue = self.intervalTextField.text {
+      controller.updateChoreList(Int(intervalValue)!, date: self.tempStartDate!)
       presentViewController(controller, animated: true, completion: nil)
     }
   }
@@ -56,24 +60,36 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
   @IBAction func setUpDate(sender: UITextField) {
     let picker = UIDatePicker()
     picker.datePickerMode = UIDatePickerMode.Date
-    picker.addTarget(self, action: "dateToString:", forControlEvents: UIControlEvents.ValueChanged)
+    if let tempDate  = self.tempStartDate {
+      picker.setDate(tempDate, animated: false)
+    }
+    picker.addTarget(self, action: "updateDate:", forControlEvents: UIControlEvents.ValueChanged)
     let pickerSize: CGSize = picker.sizeThatFits(CGSizeZero)
     picker.frame = CGRectMake(0.0, 250, pickerSize.width, 450)
     self.view.addSubview(picker)
-  
   }
   
 
   /**
-  * Convert date objects into string
+  * Convert date objects into string and updates the button and temporary start date field
   **/
-  func dateToString(date: UIDatePicker) {
+  func updateDate(date: UIDatePicker) {
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-    let strDate = dateFormatter.stringFromDate(date.date)
-    self.dateButton.setTitle(strDate, forState: UIControlState.Normal)
+    self.tempStartDate = date.date
+    self.dateButton.setTitle(dateFormatter.stringFromDate(date.date), forState: UIControlState.Normal)
     date.hidden = true
+  }
+  
+  /**
+   * Format string date into NSDate
+   **/
+  func stringToDate(date: String) -> NSDate {
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "MMMM dd, yyyy" // ex: February 25, 2016
+    let formatted: NSDate = dateFormatter.dateFromString(date)!
+    return formatted
   }
 
 }

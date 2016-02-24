@@ -9,17 +9,20 @@
 import Foundation
 
 class ChoreList {
+  var listName: String?
   var choreNames: [String]
   var employeeNames: [String]
-  var startDate: String?
+  var startDate: NSDate?
   var interval: Int?
   
   init(choreNames: [String], employeeNames: [String]) {
     self.choreNames = choreNames
     self.employeeNames = employeeNames
+    self.startDate = NSDate()
   }
   
-  init(choreNames: [String], employeeNames: [String], startDate: String, interval: Int?) {
+  init(listName: String, choreNames: [String], employeeNames: [String], startDate: NSDate, interval: Int?) {
+    self.listName = listName
     self.choreNames = choreNames
     self.employeeNames = employeeNames
     self.startDate = startDate
@@ -27,23 +30,13 @@ class ChoreList {
   }
   
   /**
-   * Format string date into NSDate
-   **/
-  func formatDate(date: String) -> NSDate {
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "MMMM dd, yyyy" // ex: February 25, 2016
-    let formatted: NSDate = dateFormatter.dateFromString(date)!
-    return formatted
-  }
-  
-  /**
    * Calculate the day difference between 2 dates
    **/
-  func calcDayDiff(start: String) -> Int {
+  func calcDayDiff(start: NSDate) -> Int {
     let calendar = NSCalendar.currentCalendar()
     let todaysDate: NSDate = NSDate()
     let unit: NSCalendarUnit = NSCalendarUnit.Day
-    let components = calendar.components(unit, fromDate: self.formatDate(start), toDate: todaysDate, options: NSCalendarOptions(rawValue: 0))
+    let components = calendar.components(unit, fromDate: start, toDate: todaysDate, options: NSCalendarOptions(rawValue: 0))
     return components.day
   }
   
