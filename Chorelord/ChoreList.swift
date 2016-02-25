@@ -47,7 +47,7 @@ class ChoreList {
     var newList = employeeNames
     if let interval = self.interval {
       let dayDifference = calcDayDiff(startDate)
-      let cycleNumber = dayDifference/interval // always floor
+      let cycleNumber = dayDifference/interval //always floor
       if (cycleNumber > 0) {
         for _ in 1...cycleNumber {
           let first = newList.removeFirst()
@@ -57,7 +57,6 @@ class ChoreList {
       } else {
         print("The cycle hasn't started yet")
       }
-      print(newList)
     }
   }
 }

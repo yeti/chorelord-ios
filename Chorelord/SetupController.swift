@@ -88,9 +88,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     dismissKeyboard()
     let picker = UIDatePicker()
     picker.datePickerMode = UIDatePickerMode.Date
-    if let tempDate  = self.tempStartDate {
-      picker.setDate(tempDate, animated: false)
-    }
+    picker.setDate(tempStartDate!, animated: false)
     picker.addTarget(self, action: "updateDate:", forControlEvents: UIControlEvents.ValueChanged)
     let pickerSize: CGSize = picker.sizeThatFits(CGSizeZero)
     picker.frame = CGRectMake(0.0, 250, pickerSize.width, 450)
@@ -105,8 +103,8 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-    self.tempStartDate = date.date
-    self.dateButton.setTitle(dateFormatter.stringFromDate(date.date), forState: UIControlState.Normal)
+    tempStartDate = date.date
+    dateButton.setTitle(dateFormatter.stringFromDate(date.date), forState: UIControlState.Normal)
     date.hidden = true
   }
   
