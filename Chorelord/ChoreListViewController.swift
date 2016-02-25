@@ -14,9 +14,10 @@ let employeeNames = ["Baylee", "Alex", "Anya", "Ellie", "Lee", "Dean", "Tony", "
 
 class ChoreListViewController: UITableViewController {
   
+  var choreList = ChoreList(choreNames: choreNames, employeeNames: employeeNames)
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    reorderList(employeeNames, start: "2016-02-01", end: "2016-02-15", interval: 7) // this is doing nothing right now, just for testing purposes
     tableView.registerNib(UINib(nibName: "ChoreTableViewCell", bundle: nil), forCellReuseIdentifier: "ChoreTableViewCell")
   }
   
@@ -26,44 +27,17 @@ class ChoreListViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ChoreTableViewCell", forIndexPath: indexPath) as! ChoreTableViewCell
-    cell.choreName.text = choreNames[indexPath.row]
-    cell.username.text = employeeNames[indexPath.row]
+    cell.choreName.text = choreList.choreNames[indexPath.row]
+    cell.username.text = choreList.employeeNames[indexPath.row]
     return cell
   }
-  
   /**
-  * Format string date into NSDate
+  * Called when the user add interval and date values
   **/
-  func formatDate(date: String) -> NSDate {
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd" // ex: 2015-02-01
-    let formatted: NSDate = dateFormatter.dateFromString(date)!
-    return formatted
+  func updateChoreList(interval: Int, date: NSDate) {
+    choreList.interval = interval
+    choreList.startDate = date
+    choreList.reorderList()
   }
   
-  /**
-  * Calculate the day difference between 2 dates
-  **/
-  func calcDayDiff(start: String, end: String) -> Int {
-    let calendar = NSCalendar.currentCalendar()
-    let unit: NSCalendarUnit = NSCalendarUnit.Day
-    let components = calendar.components(unit, fromDate: self.formatDate(start), toDate: self.formatDate(end), options: NSCalendarOptions(rawValue: 0))
-    return components.day
-  }
-  
-  /**
-  * Reorder the list based on the cycle
-  **/
-  func reorderList(nameList: [String], start: String, end: String, interval: Int) -> [String] {
-    var newList = nameList
-    let dayDifference = calcDayDiff(start, end: end)
-    let cycleNumber = dayDifference/interval // always floor
-    if (cycleNumber > 0) {
-      for _ in 1...cycleNumber {
-        let first = newList.removeFirst()
-        newList.append(first)
-      }
-    }
-    return newList
-  }
 }
